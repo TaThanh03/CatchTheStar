@@ -1,50 +1,55 @@
-//
-//  GameViewController.swift
-//  CatchTheStar
-//
-//  Created by TA Trung Thanh on 19/12/2018.
-//  Copyright © 2018 TA Trung Thanh. All rights reserved.
-//
-
 import UIKit
 import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
-
+    
+    var currentGame: GameScene!
+    var gameOverView: GameOverView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        currentGame = GameScene(size: CGSize(width: 2048, height: 1536))
+        currentGame.viewController = self
         
-        if let view = self.view as! SKView? {
-            // Load the SKScene from 'GameScene.sks'
-            if let scene = SKScene(fileNamed: "GameScene") {
-                // Set the scale mode to scale to fit the window
-                scene.scaleMode = .aspectFill
-                
-                // Present the scene
-                view.presentScene(scene)
-            }
-            
-            view.ignoresSiblingOrder = true
-            
-            view.showsFPS = true
-            view.showsNodeCount = true
-        }
+        let view = self.view as! SKView
+        // Set the scale mode to scale to fit the window
+        currentGame.scaleMode = .aspectFill
+        view.showsFPS = true
+        //view.showsNodeCount = true
+        view.ignoresSiblingOrder = true
+        
+        
+        
+        //SettingScene
+        gameOverView = GameOverView(frame: UIScreen.main.bounds)
+        gameOverView!.isHidden = true
+        view.addSubview(gameOverView!)
+        
+        // Present the scene
+        view.presentScene(currentGame)
     }
-
+    
+    
+    
     override var shouldAutorotate: Bool {
-        return true
+        return false
     }
-
+    
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         if UIDevice.current.userInterfaceIdiom == .phone {
-            return .allButUpsideDown
+            return .portrait
         } else {
-            return .all
+            return .portrait
         }
     }
-
+    
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+    
+    @objc func actionSettingButtonRestartTouched (sender: UIButton!) {
+        gameOverView?.isHidden = true
+        currentGame.startNewLevel()
     }
 }

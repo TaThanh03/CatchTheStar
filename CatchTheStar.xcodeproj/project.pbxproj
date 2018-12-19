@@ -17,6 +17,11 @@
 		1364865221C9CE0000DB930F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1364865021C9CE0000DB930F /* LaunchScreen.storyboard */; };
 		1364865D21C9CE0100DB930F /* CatchTheStarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1364865C21C9CE0100DB930F /* CatchTheStarTests.swift */; };
 		1364866821C9CE0100DB930F /* CatchTheStarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1364866721C9CE0100DB930F /* CatchTheStarUITests.swift */; };
+		1364867621C9D07400DB930F /* midnight-ride-01a.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1364867521C9D07400DB930F /* midnight-ride-01a.mp3 */; };
+		1364867821C9D08200DB930F /* son-etoile.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1364867721C9D08200DB930F /* son-etoile.mp3 */; };
+		1364867A21C9D09200DB930F /* son.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1364867921C9D09100DB930F /* son.mp3 */; };
+		1364867C21C9D09D00DB930F /* squeeze-toy-1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1364867B21C9D09D00DB930F /* squeeze-toy-1.mp3 */; };
+		1364867E21C9D17100DB930F /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1364867D21C9D17100DB930F /* GameOverView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,11 @@
 		1364866321C9CE0100DB930F /* CatchTheStarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatchTheStarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1364866721C9CE0100DB930F /* CatchTheStarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatchTheStarUITests.swift; sourceTree = "<group>"; };
 		1364866921C9CE0100DB930F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1364867521C9D07400DB930F /* midnight-ride-01a.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "midnight-ride-01a.mp3"; sourceTree = "<group>"; };
+		1364867721C9D08200DB930F /* son-etoile.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "son-etoile.mp3"; sourceTree = "<group>"; };
+		1364867921C9D09100DB930F /* son.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = son.mp3; sourceTree = "<group>"; };
+		1364867B21C9D09D00DB930F /* squeeze-toy-1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "squeeze-toy-1.mp3"; sourceTree = "<group>"; };
+		1364867D21C9D17100DB930F /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,10 +118,15 @@
 				1364864521C9CDFE00DB930F /* Actions.sks */,
 				1364864721C9CDFE00DB930F /* GameScene.swift */,
 				1364864921C9CDFE00DB930F /* GameViewController.swift */,
+				1364867D21C9D17100DB930F /* GameOverView.swift */,
 				1364864B21C9CDFE00DB930F /* Main.storyboard */,
 				1364864E21C9CE0000DB930F /* Assets.xcassets */,
 				1364865021C9CE0000DB930F /* LaunchScreen.storyboard */,
 				1364865321C9CE0100DB930F /* Info.plist */,
+				1364867521C9D07400DB930F /* midnight-ride-01a.mp3 */,
+				1364867721C9D08200DB930F /* son-etoile.mp3 */,
+				1364867921C9D09100DB930F /* son.mp3 */,
+				1364867B21C9D09D00DB930F /* squeeze-toy-1.mp3 */,
 			);
 			path = CatchTheStar;
 			sourceTree = "<group>";
@@ -238,10 +253,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1364867821C9D08200DB930F /* son-etoile.mp3 in Resources */,
 				1364864D21C9CDFE00DB930F /* Main.storyboard in Resources */,
+				1364867621C9D07400DB930F /* midnight-ride-01a.mp3 in Resources */,
 				1364864421C9CDFE00DB930F /* GameScene.sks in Resources */,
 				1364864F21C9CE0000DB930F /* Assets.xcassets in Resources */,
+				1364867A21C9D09200DB930F /* son.mp3 in Resources */,
 				1364865221C9CE0000DB930F /* LaunchScreen.storyboard in Resources */,
+				1364867C21C9D09D00DB930F /* squeeze-toy-1.mp3 in Resources */,
 				1364864621C9CDFE00DB930F /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +288,7 @@
 			files = (
 				1364864821C9CDFE00DB930F /* GameScene.swift in Sources */,
 				1364864A21C9CDFE00DB930F /* GameViewController.swift in Sources */,
+				1364867E21C9D17100DB930F /* GameOverView.swift in Sources */,
 				1364864221C9CDFE00DB930F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,6 +467,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GDYRU62339;
 				INFOPLIST_FILE = CatchTheStar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,6 +486,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GDYRU62339;
 				INFOPLIST_FILE = CatchTheStar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
